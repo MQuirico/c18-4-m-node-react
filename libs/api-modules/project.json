@@ -12,8 +12,7 @@
         "outputPath": "dist/libs/api-modules",
         "main": "libs/api-modules/src/index.ts",
         "tsConfig": "libs/api-modules/tsconfig.lib.json",
-        "assets": ["libs/api-modules/*.md"],
-        "watch": true
+        "assets": ["libs/api-modules/*.md"]
       }
     }
   }
