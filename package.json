@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "production":"npx nx build api-modules && npx nx run express-back:serve:development",
     "back-dev": "npx nx run express-back:serve:development",
     "front-dev": "npx nx run react-front:serve:devolopment",
     "all-dev": "npx nx run-many --target=serve",
