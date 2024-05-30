@@ -1,0 +1,5 @@
+.card{
+    max-width: 840px;
+    height: calc(640px - 48px);
+}
+

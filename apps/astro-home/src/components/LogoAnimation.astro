@@ -1,0 +1,14 @@
+---
+const props = {
+  title: 'Home / Desktop'
+};
+---
+
+<div class="relative flex items-center justify-center w-48 h-48">
+  <img src="/images/logo_legal_builder.svg" alt="Legal Builder Logo" class="absolute w-24 h-24">
+  <div class="absolute w-36 h-36 flex items-center justify-center animate-rotate">
+    {Array.from({ length: 120 }).map((_, i) => (
+      <div key={i} class="absolute w-0.5 h-4 bg-yellow-500" style={`transform: rotate(${i * 3}deg) translateY(-4.5rem);`}></div>
+    ))}
+  </div>
+</div>

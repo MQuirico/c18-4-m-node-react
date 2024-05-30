@@ -1,0 +1,16 @@
+---
+// src/components/Header.astro
+import StaticLogo from '../components/StaticLogo.astro';
+---
+<header class="w-full flex justify-between items-center p-4">
+  <div class="flex items-center pl-5">
+    <StaticLogo />
+    <span class="text-xl font-bold text-[#D6BA00]" >Legal Builder</span>
+  </div>
+  <nav class="mr-16">
+    <ul class=" pl-10 flex space-x-8 text-lg text-[#D6BA00] ">
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+</header>

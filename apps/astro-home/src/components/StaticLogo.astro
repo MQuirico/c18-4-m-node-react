@@ -1,0 +1,14 @@
+---
+const props = {
+  title: 'Static Logo'
+};
+---
+
+<div class="relative flex items-center justify-center w-24 h-24">
+  <img src="/images/logo_legal_builder.svg" alt="Legal Builder Logo" class="absolute w-12 h-12">
+  <div class="absolute w-20 h-20 flex items-center justify-center">
+    {Array.from({ length: 72 }).map((_, i) => (
+      <div key={i} class="absolute w-0.5 h-1.5 bg-customGold" style={`transform: rotate(${i * 5}deg) translateY(-2rem);`}></div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Puedes agregar estilos globales adicionales aquí */
+body {
+    font-family: 'Marcellus SC', serif;
+  
+  }
+
+  body {
+    @apply text-customGold;
+  }

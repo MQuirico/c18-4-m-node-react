@@ -1,0 +1,18 @@
+.animated-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.animated-logo .rotating-circle {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+      transform: rotate(360deg);
+  }
+}

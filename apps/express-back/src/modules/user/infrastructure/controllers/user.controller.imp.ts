@@ -1,23 +1,16 @@
 import {
   UserRepository,
   CreateUserDTO,
-  CustomError,
   ForUserApiControllerRepo,
 } from '@c18-04-m-node-react/api-modules';
 import { Response, Request } from 'express';
+import { handleError } from '../../../../utilities';
 
 export class UserApiControllerRepoImpl implements ForUserApiControllerRepo {
-  constructor(private readonly userRepository: UserRepository) {}
-  handleError(error: unknown, res: Response) {
-    if (error instanceof CustomError) {
-      return res
-        .status(error.statusCode)
-        .json({ error: 'Internal server error' });
-    }
-
-    return res.status(500).json({ error: 'Internal server error' });
+  private handleError: (error: unknown, res: Response) => void;
+  constructor(private readonly userRepository: UserRepository) {
+    this.handleError = handleError;
   }
-
   //Crear usuario
   create = (req: Request, res: Response) => {
     const [error, createUser] = CreateUserDTO.create(req.body);

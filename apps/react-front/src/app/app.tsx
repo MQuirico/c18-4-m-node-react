@@ -1,11 +1,15 @@
-import {FrontComponents} from "@c18-04-m-node-react/front-components"
+
+import Home from "../pages/Home";
 
 export function App() {
+
   return (
-    <div>
-      <FrontComponents/>
+    <div className="bg-darkPurple w-full h-screen">
+      <Home/>
     </div>
   );
 }
 
 export default App;
+
+

@@ -1,0 +1,80 @@
+.input{
+    width: 535px;
+}
+
+.input::placeholder{
+    color : #A49B9B
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+    -webkit-text-fill-color: #A49B9B;
+    font-size: 18px;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input::placeholder::first-letter{
+    font-size: 20px;
+}
+
+.button{
+    min-width: calc(143px - 32px);
+}
+
+.select{
+    width: calc(166px - 32px);
+}
+
+.contenedor{
+    width: 567px;
+}
+
+.input2{
+    width: 162px;
+}
+
+.input3{
+    width: 120px;
+}
+
+.form{
+    height: 456px;
+}
+
+@media (max-width: 768px){
+    .card{
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .button{
+        min-width: 100%;
+    }
+
+    .select{
+        width: 30%;
+    }
+
+    .contenedor{
+        width: 100%;
+    }
+
+    .input2{
+        width: 100%;
+    }
+
+    .input3{
+        width: 100%;
+    }
+
+    .form{
+        height: 100%;
+    }
+}
