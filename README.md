@@ -12,7 +12,6 @@
 API_PORT = 3000
 # Database
 DB_HOST = localhost
-DB_PORT = 27017
 DB_USER = root
 DB_PASSWORD = example
 DB_NAME = c18-04-m-node-react

@@ -10,7 +10,6 @@ async function main() {
   //Database connection
   await new MongoDBService({
     host: envs.DB_HOST,
-    port: envs.DB_PORT,
     username: envs.DB_USER,
     password: envs.DB_PASSWORD,
     databaseName: envs.DB_NAME
