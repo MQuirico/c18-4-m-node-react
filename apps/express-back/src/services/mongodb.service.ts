@@ -2,7 +2,6 @@ import mongoose from 'mongoose'
 
 interface MongoDBOptionsInterface{
   host: string
-  port: number
   username: string
   password: string
   databaseName: string
@@ -10,25 +9,25 @@ interface MongoDBOptionsInterface{
 
 export class MongoDBService{
   private readonly host:string
-  private readonly port:number
   private readonly user:string
   private readonly password:string
   private readonly databaseName:string
 
   constructor(options: MongoDBOptionsInterface){
     this.host = options.host
-    this.port = options.port
     this.user = options.username
     this.password = options.password
     this.databaseName = options.databaseName
   }
 
   public async connect(){
-    await mongoose.connect(`mongodb://${this.host}:${this.port}`, {
+    await mongoose.connect(`${this.host}`, {
       authSource: 'admin',
+      retryWrites: true,
       user: this.user,
       pass: this.password,
-      dbName: this.databaseName
+      dbName: this.databaseName,
+      appName:'c18-04-m-node-react'
     }).then(() => {
         console.log('✅ MongoDB connected 🔌📡🚀...');
     }).catch((error) => {
