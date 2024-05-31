@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "production": "npx nx build api-modules && npx nx run express-back:serve:development",
+    "production": "npx nx build api-modules && npx nx build express-back",
     "back-dev": "npx nx run express-back:serve:development",
     "front-dev": "npx nx run react-front:serve:devolopment",
     "all-dev": "npx nx run-many --target=serve",
     "modules": "npx nx run api-modules:build",
-    "build": "",
+    "build": "npx nx build api-modules && npx nx build express-back",
     "lint": ""
   },
   "private": true,
