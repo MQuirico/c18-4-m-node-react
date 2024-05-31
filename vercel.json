@@ -1,6 +1,4 @@
 {
-  "build": {
-    "command": "npx nx build api-modules && npx nx build express-back"
-  },
+  "buildCommand": "npx nx build api-modules && npx nx build express-back",
   "outputDirectory": "dist/apps/express-back"
 }
