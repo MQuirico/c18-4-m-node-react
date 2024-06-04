@@ -11,6 +11,8 @@ export type globalContent = {
     setOnUser: (m: Boolean) => void,
     isAdmin: Boolean,
     setIsAdmin: (m: Boolean) => void,
+    panelMenu: Number,
+    setPanelMenu: (m: Number) => void
 }
 
 export const Context = createContext<globalContent>({
@@ -19,7 +21,9 @@ export const Context = createContext<globalContent>({
     onUser: false,
     setOnUser: () => {},
     isAdmin: false,
-    setIsAdmin: () => {}
+    setIsAdmin: () => {},
+    panelMenu: 0,
+    setPanelMenu: () => {}
 });
 
 export function ContextProvider({ children }: childernType) {
@@ -27,8 +31,9 @@ export function ContextProvider({ children }: childernType) {
   const [menuApp, setMenuApp] = useState<Number>(0);
   const [onUser, setOnUser] = useState<Boolean>(false);
   const [isAdmin, setIsAdmin] = useState<Boolean>(false);
+  const [panelMenu, setPanelMenu] = useState<Number>(0);
 
-  return <Context.Provider value={{menuApp, setMenuApp, onUser, setOnUser, isAdmin, setIsAdmin}}>{children}</Context.Provider>;
+  return <Context.Provider value={{menuApp, setMenuApp, onUser, setOnUser, isAdmin, setIsAdmin, panelMenu, setPanelMenu}}>{children}</Context.Provider>;
 }
 
 export default Context;

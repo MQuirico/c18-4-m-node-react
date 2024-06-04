@@ -4,7 +4,7 @@ import { Context } from '../../context/Context'
 
 function Login() {
 
-  const {setMenuApp} = useContext(Context);
+  const {setMenuApp, setOnUser} = useContext(Context);
 
   return (
     <div className='bg-lightPurple flex flex-col justify-between items-center w-full h-[70%] min-h-[200px] md:w-1/2'>
@@ -26,7 +26,7 @@ function Login() {
       <div className='flex justify-center items-center w-4/5 h-1/6'>
         <div className='flex justify-center items-center gap-4 w-full h-full sm:justify-end sm:w-auto'>
           <Button onClick={() => setMenuApp(0)}>Cancel</Button>
-          <Button>Enter</Button>
+          <Button onClick={() => {setMenuApp(0); setOnUser(true)}}>Enter</Button>
         </div>
       </div>
     </div>
